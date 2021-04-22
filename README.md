@@ -29,6 +29,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [x] Validação de token
 - [ ] Cadastro de localização
 - [ ] Consulta de localização
+- [ ] Implementar testes com *RSpec*
 
 ## Tests
 
