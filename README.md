@@ -11,7 +11,7 @@ Este projeto esta em estudo e desenvolvimento para aprendizado de utlização do
 <p align="center">
  <a href="#Tecnologias">Tecnologias</a> •
  <a href="#Features">Features</a> • 
- <a href="#Heroku">Testes</a> • 
+ <a href="#Tests">Testes</a> • 
 </p>
 
 ### 🛠 Tecnologias
@@ -30,7 +30,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [ ] Cadastro de localização
 - [ ] Consulta de localização
 
-## Realizar Teste
+## Tests
 
 ### Em maquina
 As gem's necessarias:
