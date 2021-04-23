@@ -27,7 +27,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [x] Edição de usuário
 - [x] Funcionalidade de login e logout
 - [x] Validação de token
-- [ ] Cadastro de localização
+- [X] Cadastro de localização
 - [ ] Consulta de localização
 - [ ] Implementar testes com *RSpec*
 
