@@ -30,10 +30,12 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - localização
 	- [X] Cadastro de Localização
 	- [X] Criar dependencia de autenticação
-	- [ ] adicionar preenchimento automatico de address por cep
-	- [ ] Adicionar busca Lat Lon por address
+	- [X] adicionar preenchimento automatico de address por cep
+	- [X] Adicionar busca Lat Lon por address
 	 
-- [ ] Consulta de localização
+- Consulta de localização
+	- [X] Consulta por Ordem Alfabética 
+	- [ ] Consulta por distancia geografica  
 - [ ] Implementar testes com *RSpec*
 
 ## Tests
@@ -105,8 +107,28 @@ A aplicação hoje está no heroku podendo ser acessada pelo link *https://local
   
 ## Cadastro de Localização
 
-> É necessario ter feito o login para cadastrar a localização, contendo os campos *cep,address,city,state,district,lat e lon*.
-- Rotas: /locals
+> É necessario ter feito o login para cadastrar a localização, contendo os campos *cep,address, number, city,state,district,lat* e *lon*.
+- Rotas */locals*
 
+### Preenchimento de Endereco
+> gem utlizada:
+```ruby 
+gem "correios-cep"
+```
+> Ao cadastrar novo endereço passando o cep ele realiza a pesquisa do *address, city, district* e *state*
+ 
+### Preenchimento de Posição
+
+> apos realizar a pesquisa pela gem *correios-cep* ele busca a latitude e longitude na gem:
+
+```ruby 
+gem 'geocoder', '~> 1.6', '>= 1.6.7'
+```
+>Pesquisando por Rua e Cidade.
+
+
+## Consulta
+ Foi relizado apenas a consulta por ordem Alfabética 
+ - Rota: */alphabetical_order*
 
 
