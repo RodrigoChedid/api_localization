@@ -10,10 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_19_200602) do
+ActiveRecord::Schema.define(version: 2021_04_23_132114) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "locals", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "cep"
+    t.string "Address"
+    t.string "City"
+    t.string "District"
+    t.string "lat"
+    t.string "lon"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_locals_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "provider", default: "email", null: false
@@ -45,4 +58,5 @@ ActiveRecord::Schema.define(version: 2021_04_19_200602) do
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
   end
 
+  add_foreign_key "locals", "users"
 end
