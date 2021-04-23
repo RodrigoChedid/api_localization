@@ -5,7 +5,10 @@ Rails.application.routes.draw do
     mount_devise_token_auth_for 'User', at: 'auth'
 
     resources :locals
-   
+    
+    controller :locals do
+      get 'alphabetical_order', action: :alphabetical_order
+    end
 
   end 
 

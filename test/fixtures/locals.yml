@@ -3,17 +3,19 @@
 one:
   user: one
   cep: MyString
-  Address: MyString
-  City: MyString
-  District: MyString
+  address: MyString
+  number: MyString
+  city: MyString
+  district: MyString
   lat: MyString
   lon: MyString
 
 two:
   user: two
   cep: MyString
-  Address: MyString
-  City: MyString
-  District: MyString
+  address: MyString
+  number: MyString
+  city: MyString
+  district: MyString
   lat: MyString
   lon: MyString

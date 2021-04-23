@@ -4,6 +4,7 @@ class CreateLocals < ActiveRecord::Migration[5.2]
       t.references :user, foreign_key: true
       t.string :cep
       t.string :address
+      t.string :number
       t.string :city
       t.string :state
       t.string :district

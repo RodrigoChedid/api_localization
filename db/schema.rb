@@ -18,9 +18,11 @@ ActiveRecord::Schema.define(version: 2021_04_23_132114) do
   create_table "locals", force: :cascade do |t|
     t.bigint "user_id"
     t.string "cep"
-    t.string "Address"
-    t.string "City"
-    t.string "District"
+    t.string "address"
+    t.string "number"
+    t.string "city"
+    t.string "state"
+    t.string "district"
     t.string "lat"
     t.string "lon"
     t.datetime "created_at", null: false

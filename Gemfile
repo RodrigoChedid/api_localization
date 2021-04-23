@@ -51,3 +51,5 @@ gem "active_model_serializers", "~> 0.10.12"
 gem "rack-cors", "~> 1.1"
 
 gem 'geocoder', '~> 1.6', '>= 1.6.7'
+
+gem 'correios-cep'

@@ -1,3 +1,4 @@
+require 'correios-cep'
 class Api::LocalsController < ApplicationController
   before_action :authenticate_api_user!
   before_action :set_local, only: [:show, :update, :destroy]
@@ -14,9 +15,28 @@ class Api::LocalsController < ApplicationController
     render json: @local
   end
 
+  def alphabetical_order
+    @locals = current_api_user.locals.all.order(:address)
+
+    render json: @locals
+  end
   # POST /locals
   def create
     @local = current_api_user.locals.new(local_params)
+
+    if  !@local.cep.blank? then
+    
+      address = Correios::CEP::AddressFinder.get(@local.cep)
+      @local.address = @local.address.blank? ? address[:address] :  @local.address
+      @local.city = @local.city.blank? ? address[:city] :  @local.city
+      @local.state = @local.state.blank? ? address[:state] :  @local.state
+
+      coordinates = Geocoder.search("#{@local.address}, #{@local.city}").first.coordinates
+      @local.lat = coordinates.first
+      @local.lon = coordinates.last
+      
+    end
+  
 
     if @local.save
       render json: @local, status: :created, location: api_local_url(@local)
@@ -47,6 +67,6 @@ class Api::LocalsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def local_params
-      params.require(:local).permit(:user_id, :cep, :address,:state, :city, :district, :lat, :lon)
+      params.require(:local).permit(:user_id, :cep, :address, :number, :state, :city, :district, :lat, :lon)
     end
 end
