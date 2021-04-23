@@ -11,7 +11,7 @@ Este projeto esta em estudo e desenvolvimento para aprendizado de utlização do
 <p align="center">
  <a href="#Tecnologias">Tecnologias</a> •
  <a href="#Features">Features</a> • 
- <a href="#Tests">Testes</a> • 
+ <a href="#Body">Body</a> • 
 </p>
 
 ### 🛠 Tecnologias
@@ -38,7 +38,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 	- [ ] Consulta por distancia geografica  
 - [ ] Implementar testes com *RSpec*
 
-## Tests
+## Body
 
 ### Em maquina
 As gem's necessarias:
