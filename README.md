@@ -30,8 +30,9 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - localização
 	- [X] Cadastro de Localização
 	- [X] Criar dependencia de autenticação
+	- [ ] adicionar preenchimento automatico de address por cep
 	- [ ] Adicionar busca Lat Lon por address
-	- [ ] adicionar preenchimento automatico por cep e numero 
+	 
 - [ ] Consulta de localização
 - [ ] Implementar testes com *RSpec*
 
