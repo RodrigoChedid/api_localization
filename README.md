@@ -27,7 +27,11 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [x] Edição de usuário
 - [x] Funcionalidade de login e logout
 - [x] Validação de token
-- [X] Cadastro de localização
+- localização
+	- [X] Cadastro de Localização
+	- [X] Criar dependencia de autenticação
+	- [ ] Adicionar busca Lat Lon por address
+	- [ ] adicionar preenchimento automatico por cep e numero 
 - [ ] Consulta de localização
 - [ ] Implementar testes com *RSpec*
 
