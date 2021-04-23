@@ -36,6 +36,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - Consulta de localização
 	- [X] Consulta por Ordem Alfabética 
 	- [ ] Consulta por distancia geografica  
+- [ ] Criação de tabela de avaliação de local
 - [ ] Implementar testes com *RSpec*
 
 ## Body
