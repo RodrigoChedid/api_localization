@@ -98,5 +98,10 @@ A aplicação hoje está no heroku podendo ser acessada pelo link *https://local
 }
 ``` 
   
+## Cadastro de Localização
+
+> É necessario ter feito o login para cadastrar a localização, contendo os campos *cep,address,city,state,district,lat e lon*.
+> Rotas: /locals
+
 
 
